@@ -3,7 +3,7 @@ print("Ingrese el número 1")
 numero1 = int(input())
 print("Ingrese el número 2")
 numero2 = int(input())
-print("Ingrese la operación (+, -, *, /)")
+print("Ingrese la operación (+, -, *, /,%,^)")
 operacion = input()
 
 match operacion:
@@ -23,5 +23,11 @@ match operacion:
         # Operación división:
         division = numero1 / numero2
         print("La división es " + str(division))
-    case _ :
-        print("Operación inválida")
+    case '%'
+    # operacion residuo
+    residuo = numero1 % numero2
+    print ("El residuo es "+str(residuo))
+    case '^'
+    # operacion de potencia
+    potencia =  pow(numero1,numero2)
+    print ("la potencia es "+ str(potencia))
